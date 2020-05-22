@@ -62,8 +62,8 @@ module.exports = function (options) {
         let path = file.s3.path;
 
         if (options.originPath) {
-          const originRegex = new RegExp(options.originPath.replace(/^\//, '') + '\/?');
-          path = path.replace(originRegex, '');
+          //const originRegex = new RegExp(options.originPath.replace(/^\//, '') + '\/?');
+          path = options.originPath;
         }
 
         files.push(path);
